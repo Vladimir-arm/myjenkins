@@ -3,13 +3,15 @@ pipeline {
     stages {
         stage('Java compile') { 
             steps {
-                echo 'Hello, Java'
+                echo 'Compiling Java...'
 		sh 'java -version'
+                sh 'javac HelloWorld.java'
             }
         }
         stage('Run Java project') { 
             steps {
-                echo 'Hello, JDK'
+                echo 'Running Hello World project'
+		sh 'java HelloWorld'
             }
         }
     }
