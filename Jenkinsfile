@@ -4,7 +4,6 @@ pipeline {
         stage('Java compile') { 
             steps {
                 echo 'Hello, Java'
-                java -version
             }
         }
         stage('Run Java project') { 
